@@ -18,9 +18,26 @@ function largest($array)
 function average($array)
 {
     $total= 0;
-    $counter=0;foreach($array as $element)
+    foreach($array as $element)
     {
         $total+= $element;
     }
     echo $total/sizeof($array);
+}
+
+function removeDups($array)
+{
+    //grab the first element
+    //$first_element= $array[0];
+    for($i=0; $i<sizeof($array); $i++)
+    {
+        for ($j=1; $j < sizeof($array); $j++)
+        {
+            if($array[$j] == $array[$i])
+            {
+                unset($array[$j]);
+            }
+        }
+    }
+    echo implode($array, ",");
 }

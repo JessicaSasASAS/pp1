@@ -1,6 +1,8 @@
 <?php
-$numbers= [7,9,8,9,8,8,6];
+ini_set ('display_errors', 1);
+error_reporting(E_ALL);
 
+$numbers= [7,9,8,9,8,8,6];
 include("functions.php");
 ?>
 <!DOCTYPE html>
@@ -18,6 +20,8 @@ include("functions.php");
     largest($numbers);
     echo"<br>";
     average($numbers);
+    echo"<br>";
+    removeDups($numbers);
     ?>
 
 </body>
